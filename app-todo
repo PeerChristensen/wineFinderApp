@@ -1,0 +1,19 @@
+App - TODO
+
+input
+- text (top of main panel)
+- red vs. white
+- max hits, slider default = 5
+- price range, default = all
+- min points, default = all
+- country, picker, default = all
+
+output
+- title 
+- variety
+- country
+- province
+- winery
+- description     
+- points
+- price   
