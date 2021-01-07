@@ -76,7 +76,7 @@ ui <- fluidPage(theme = shinytheme("sandstone"),
 
         mainPanel(
             textInput("text",
-                      label = h3("How do you like your wine?"),
+                      label = h3(em("How do you like your wine?")),
                       value = "",
                       width = "80%",
                       placeholder = "You may describe features such as appearance, flavours and structure"),
@@ -85,7 +85,13 @@ ui <- fluidPage(theme = shinytheme("sandstone"),
                          width="80px",
                          style='padding:1px;'),
             hr(),
-            dataTableOutput('table')
+            dataTableOutput('table'),
+            HTML(
+                paste(
+                    h4(strong("Data source")),
+                    "The data was scraped from WineEnthusiast in June, 2017",'<br/>',
+                    "For more information please visit", a('Kaggle', target='_blank', href='https://www.kaggle.com/zynicide/wine-reviews'),'<br/>'
+                    ))
         )
     )
 )
